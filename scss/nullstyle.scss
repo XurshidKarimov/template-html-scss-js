@@ -14,8 +14,10 @@
 }
 
 @mixin font($fSize, $fWeight, $lHeight, $fTrans: none, $fColor: black) {
-  font-size: #{$fSize}+px;
-  font-weight: $fWeight;
+  font: {
+    size: #{$fSize}+px;
+    weight: $fWeight;
+  }
 
   @if $lHeight ==inherit or $lHeight==none or $lHeight==normal {
     line-height: $lHeight;
